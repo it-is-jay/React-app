@@ -17,6 +17,7 @@ import Logo from './assets/images/logo192.png'
 import LoginContext from './context/LoginContext';
 
 import { Routes, Route, Link } from 'react-router-dom';
+import ReactPlayer from 'react-player';
 
 function App(props) {
   const ArrowFunction = (props) => {
@@ -64,15 +65,25 @@ function App(props) {
         <Link to='/page2'>Page 2</Link>
         <Link to='/date'> Date </Link>
         <Link to='/image'> Image </Link>
+        <Link to='/video'> Video </Link>
       </nav>
       <Routes>
         <Route path='/page1' element={<Page1/>}></Route>
         <Route path='/page2' element={<Page2/>}></Route>
         <Route path='/date' element={<DateMessage/>}></Route>
         <Route path='/image' element={<img src={Logo} alt='Image imported as module'/>}></Route>
+        <Route path='/video' element={<MyVideo/>}></Route>
       </Routes>
     </div>
   );  
 }
+
+const MyVideo = () => {
+  return (
+    <ReactPlayer url='https://www.youtube.com/watch?v=pjNI9K1D_xo' 
+    playing={false}
+    volume={0.5}/>
+  );
+};
 
 export default App;
