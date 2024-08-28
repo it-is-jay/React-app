@@ -1,5 +1,5 @@
-# Getting Started with Create React App
-
+The project utilizes custom React components to demonstrate key concepts such as state management, dependency injection, Context API, routing, user interaction, and data flow.
+Refer to index.js as starting point of the application.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
